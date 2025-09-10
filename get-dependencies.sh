@@ -30,3 +30,5 @@ echo "---------------------------------------------------------------"
 wget --retry-connrefused --tries=30 "$EXTRA_PACKAGES" -O ./get-debloated-pkgs.sh
 chmod +x ./get-debloated-pkgs.sh
 ./get-debloated-pkgs.sh --add-opengl libxml2-mini opus-mini qt6-base-mini
+
+pacman -Q mame | awk '{print $2; exit}' > ~/version
