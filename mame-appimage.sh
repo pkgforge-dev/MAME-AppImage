@@ -21,7 +21,7 @@ export DEPLOY_QT=1
 # ADD LIBRARIES
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
-./quick-sharun /usr/lib/mame/mame /usr/lib/gio/modules/libdconfsettings.so
+./quick-sharun /usr/lib/mame/mame /usr/lib/gio/modules/libdconfsettings.so /usr/lib/libdecor/*/libdecor-cairo.so
 
 cp -rvn /usr/lib/mame/* ./AppDir/bin
 
