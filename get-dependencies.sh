@@ -7,22 +7,24 @@ EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImage
 echo "Installing dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	base-devel         \
-	cmake              \
-	ccache             \
-	curl               \
-	git                \
-	libx11             \
-	libxrandr          \
-	libxss             \
-	mame               \
-	pipewire-audio     \
-	pulseaudio         \
-	pulseaudio-alsa    \
-	sdl2               \
-	wget               \
-	xorg-server-xvfb   \
-	zlib               \
+	base-devel        \
+	cmake             \
+	dconf             \
+	ccache            \
+	curl              \
+	git               \
+	libdecor          \
+	libx11            \
+	libxrandr         \
+	libxss            \
+	mame              \
+	pipewire-audio    \
+	pulseaudio        \
+	pulseaudio-alsa   \
+	sdl2              \
+	wget              \
+	xorg-server-xvfb  \
+	zlib              \
 	zsync
 
 echo "Installing debloated packages..."
