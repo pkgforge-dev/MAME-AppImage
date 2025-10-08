@@ -40,6 +40,7 @@ sed -i \
 	-e 's|MAKEFLAGS=.*|MAKEFLAGS="-j$(nproc)"|'  \
 	-e 's|#MAKEFLAGS|MAKEFLAGS|'                 \
 	/etc/makepkg.conf
+cat /etc/makepkg.conf
 
 git clone --depth 1 https://gitlab.archlinux.org/archlinux/packaging/packages/mame.git ./mame && (
 	cd ./mame
