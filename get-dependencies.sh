@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -ex
-
+ARCH="$(uname -m)"
 EXTRA_PACKAGES="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/get-debloated-pkgs.sh"
 
 echo "Installing dependencies..."
@@ -43,6 +43,7 @@ sed -i \
 
 git clone --depth 1 https://gitlab.archlinux.org/archlinux/packaging/packages/mame.git ./mame && (
 	cd ./mame
+	sed -i -e "s|x86_64|$ARCH|" ./PKGBUILD
 	makepkg -fs --noconfirm --skippgpcheck
 	ls -la .
 	pacman --noconfirm -U ./*.pkg.tar.*
