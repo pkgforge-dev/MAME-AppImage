@@ -15,4 +15,4 @@ pacman -Syu --noconfirm \
 
 echo "Building MAME..."
 echo "---------------------------------------------------------------"
-make-aur-package mame
+make-aur-package --archlinux-pkg mame
