@@ -15,5 +15,5 @@ pacman -Syu --noconfirm \
 
 echo "Building MAME..."
 echo "---------------------------------------------------------------"
-gpg --recv-keys 79BE3E4300411886
+gpg --recv-keys C174B1018C40710E
 make-aur-package --archlinux-pkg mame
