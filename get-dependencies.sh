@@ -15,5 +15,6 @@ pacman -Syu --noconfirm \
 
 echo "Building MAME..."
 echo "---------------------------------------------------------------"
-gpg --recv-keys C174B1018C40710E
+pacman -Rns archlinux-keyring && pacman -S archlinux-keyring && pacman-key --init && pacman-key --populate
+sed -i -e 's|--skippgpcheck||g' "$(command -v make-aur-package)"
 make-aur-package --archlinux-pkg mame
