@@ -17,9 +17,8 @@ export DEPLOY_QT=1
 
 # Deploy dependencies
 quick-sharun \
-  /usr/lib/mame/mame                       \
-  /usr/lib/gio/modules/libdconfsettings.so \
-  /usr/lib/libdecor/*/libdecor-cairo.so
+  /usr/lib/mame/mame \
+  /usr/lib/gio/modules/libdconfsettings.so
   
 cp -rvn /usr/lib/mame/* ./AppDir/bin
 
