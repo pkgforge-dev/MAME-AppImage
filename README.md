@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/MAME-AppImage)](https://github.com/pkgforge-dev/MAME-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mamedev/mame/refs/heads/master/docs/source/images/MAMElogo.svg" width="128" />
+  <img src="https://raw.githubusercontent.com/mamedev/mame/refs/heads/master/docs/source/images/MAMElogo.svg" width="256" />
 </p>
 
 
