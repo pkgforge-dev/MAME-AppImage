@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ ! -d ~/.mame ]; then
+	for d in cfg nvram sta snap diff comments share inp ini; do
+		mkdir -p ~/.mame/"$d"
+	done
+fi
+
+for a do
+	case "$a" in
+		-createconfig|-cc) _skip_path_overrides=1; break;;
+	esac
+done
+
+if [ "$_skip_path_overrides" != 1 ]; then
+	set -- \
+		-hashpath      "$HOME/.mame/hash;$APPDIR/bin/hash"         \
+		-pluginspath   "$APPDIR/bin/plugins"                       \
+		-artpath       "$HOME/.mame/artwork;$APPDIR/bin/artwork"   \
+		-bgfx_path     "$APPDIR/bin/bgfx"                          \
+		-ctrlrpath     "$HOME/.mame/ctrlr;$APPDIR/bin/ctrlr"       \
+		-languagepath  "$HOME/.mame/language;$APPDIR/bin/language" \
+		"$@"
+fi
